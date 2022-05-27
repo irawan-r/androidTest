@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.amora.testandroid.api.ConfigApi
 import com.amora.testandroid.base.viewmodel.ViewModelFactory
 import com.amora.testandroid.databinding.HomeBinding
 import com.amora.testandroid.viewmodel.HomeViewModel
@@ -26,6 +27,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val retrofit = ConfigApi
         val viewModelFactory =
             ViewModelFactory.getInstance(requireContext())
         viewModel = ViewModelProvider(this, viewModelFactory)[HomeViewModel::class.java]

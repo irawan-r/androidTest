@@ -1,5 +1,6 @@
 package com.amora.testandroid.repo
 
+import com.amora.testandroid.model.AndroidResponse
 import com.amora.testandroid.model.ResponseDetail
 import com.amora.testandroid.model.ResponseItem
 import retrofit2.Response

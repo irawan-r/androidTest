@@ -1,13 +1,17 @@
 package com.amora.testandroid.repo
 
 import com.amora.testandroid.api.ConfigApi
+import com.amora.testandroid.model.AndroidResponse
 import com.amora.testandroid.model.ResponseDetail
 import com.amora.testandroid.model.ResponseItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class RemoteDataSource(
-    private val apiConfig: ConfigApi
+    private val apiConfig: ConfigApi,
 ) {
 
     companion object {

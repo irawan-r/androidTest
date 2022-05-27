@@ -9,8 +9,9 @@ import com.amora.testandroid.repo.Repository
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    private val repository: Repository
+    private val repository: Repository,
 ) : ViewModel() {
+
     private val _testAndroid = MutableLiveData<List<ResponseItem?>?>()
     val testAndroid: LiveData<List<ResponseItem?>?> = _testAndroid
 
