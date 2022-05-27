@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="androidItem"
+            type="com.amora.testandroid.model.ResponseItem" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="8dp"
+        android:background="?android:colorBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_anime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:padding="4dp"
+                android:singleLine="true"
+                android:text="@{androidItem.title}"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                tools:text="Title" />
+
+            <TextView
+                android:id="@+id/complete_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:padding="4dp"
+                android:text="@{androidItem.completed.toString()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="False" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
