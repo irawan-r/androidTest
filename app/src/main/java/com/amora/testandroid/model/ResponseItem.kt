@@ -3,6 +3,7 @@ package com.amora.testandroid.model
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class ResponseItem(
 
     @Json(name="id")
