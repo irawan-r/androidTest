@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.amora.testandroid.model.ResponseDetail
-import com.amora.testandroid.model.ResponseItem
 import com.amora.testandroid.repo.Repository
 import kotlinx.coroutines.launch
 

@@ -2,7 +2,6 @@ package com.amora.testandroid.repo
 
 import com.amora.testandroid.model.ResponseDetail
 import com.amora.testandroid.model.ResponseItem
-import retrofit2.Call
 
 class Repository private constructor(
     private val remoteDataSource: RemoteDataSource,

@@ -22,7 +22,7 @@ class RemoteDataSource(
 
     suspend fun getTestAndroid(callback: GetTestAndroid) {
         withContext(Dispatchers.IO) {
-            val item = apiConfig.api.testAndroid().response
+            val item = apiConfig.api.testAndroid()
             callback.onAndroidReceived(item)
         }
     }

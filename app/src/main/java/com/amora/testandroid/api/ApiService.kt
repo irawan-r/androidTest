@@ -10,7 +10,7 @@ import retrofit2.http.Path
 interface ApiService {
 
     @GET("todos")
-    suspend fun testAndroid(): AndroidResponse
+    suspend fun testAndroid(): List<ResponseItem>
 
     @GET("todos/{id}")
     suspend fun testDetail(@Path("id") id: Int): ResponseDetail
