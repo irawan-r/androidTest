@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.amora.testandroid.ui.HomeFragment"
-        android:label="HomeFragment"
+        android:label="AndroidTest"
         tools:layout="@layout/home">
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
@@ -18,7 +18,7 @@
         tools:layout="@layout/detail"
         android:id="@+id/detailFragment"
         android:name="com.amora.testandroid.ui.DetailFragment"
-        android:label="DetailFragment">
+        android:label="Detail Item">
         <argument
             android:name="id"
             app:argType="integer" />
