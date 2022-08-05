@@ -1,12 +1,11 @@
 package com.amora.testandroid.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.amora.testandroid.R
 import com.amora.testandroid.base.viewmodel.ViewModelFactory
 import com.amora.testandroid.databinding.HomeBinding
 import com.amora.testandroid.viewmodel.HomeViewModel
@@ -15,6 +14,26 @@ class HomeFragment : Fragment() {
 
     private lateinit var viewModel: HomeViewModel
     private lateinit var binding: HomeBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.about_options -> {
+                val action = HomeFragmentDirections.actionHomeFragmentToAboutFragment()
+                findNavController().navigate(action)
+                return true
+            }
+        }
+        return false
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

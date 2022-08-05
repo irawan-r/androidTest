@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Test Android</string>
     <string name="complete">Complete</string>
+    <string name="email">irawanr56@yahoo.com</string>
+    <string name="title">Createdby</string>
+    <string name="name">Roy Irawan</string>
 </resources>
